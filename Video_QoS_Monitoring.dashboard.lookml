@@ -88,7 +88,7 @@
     model: saib-video-qos
     explore: video_qoe_events
     type: looker_grid
-    fields: [video_qoe_events.session_id, video_qoe_events.time_stamp_time, video_qoe_events.video_src,
+    fields: [video_qoe_events.session_id, video_qoe_events.time_stamp_time, video_qoe_events.content_name, video_qoe_events.video_src,
       video_qoe_events.start_up_time, video_qoe_events.total_buffer_time, video_qoe_events.total_buffer_count]
     sorts: [video_qoe_events.time_stamp_time desc]
     limit: 500
