@@ -73,7 +73,7 @@ view: video_qoe_events {
 
   measure: last_time_stamp {
     type: date_time
-    sql:  MAX($(${time_stamp_raw} ;;
+    sql:  MAX(${time_stamp_raw}) ;;
     convert_tz:  no
   }
 
