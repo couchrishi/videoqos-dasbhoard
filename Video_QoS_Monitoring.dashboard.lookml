@@ -1,7 +1,7 @@
 - dashboard: video-qos-monitoring
   title: Video QoS
   layout: newspaper
-  refresh: 5 seconds
+  refresh: 5 hours
   preferred_viewer: dashboards-next
   elements:
   - title: ''
