@@ -88,12 +88,12 @@
     model: saib-video-qos
     explore: video_qoe_events
     type: looker_grid
-    fields: [video_qoe_events.session_id, video_qoe_events.time_stamp_time, video_qoe_events.content_name, video_qoe_events.video_src,
-      video_qoe_events.start_up_time, video_qoe_events.total_buffer_time, video_qoe_events.total_buffer_count, video_qoe_events.user_ip, video_qoe_events.watch_time,
+    fields: [video_qoe_events.session_id, video_qoe_events.time_stamp_time, video_qoe_events.content_name,
+      video_qoe_events.video_src, video_qoe_events.start_up_time, video_qoe_events.total_buffer_time,
+      video_qoe_events.total_buffer_count, video_qoe_events.user_ip, video_qoe_events.watch_time,
       video_qoe_events.session_status]
     sorts: [video_qoe_events.time_stamp_time desc]
     limit: 500
-    query_timezone: UTC
     show_view_names: false
     show_row_numbers: true
     transpose: false
@@ -110,18 +110,18 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     color_application:
-      collection_id: google
-      palette_id: google-categorical-0
+    collection_id: google
+    palette_id: google-categorical-0
     show_sql_query_menu_options: false
     show_totals: true
     show_row_totals: true
     series_column_widths:
-      video_qoe_events.time_stamp_time: 272
-      video_qoe_events.video_src: 629
-      video_qoe_events.total_buffer_time: 179
-      video_qoe_events.start_up_time: 163
-      video_qoe_events.total_buffer_count: 162
-      video_qoe_events.session_id: 245
+    video_qoe_events.time_stamp_time: 272
+    video_qoe_events.video_src: 629
+    video_qoe_events.total_buffer_time: 179
+    video_qoe_events.start_up_time: 163
+    video_qoe_events.total_buffer_count: 162
+    video_qoe_events.session_id: 245
     header_font_color: ''
     header_background_color: "#34A853"
     custom_color_enabled: true
