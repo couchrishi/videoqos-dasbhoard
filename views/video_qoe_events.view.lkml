@@ -46,6 +46,26 @@ view: video_qoe_events {
     sql: ${TABLE}.videoSrc ;;
   }
 
+  dimension: session_status {
+    type: string
+    sql: ${TABLE}.sessionStatus ;;
+  }
+
+  dimension: video_length {
+    type: string
+    sql: ${TABLE}.videoLength ;;
+  }
+
+  dimension: watch_time {
+    type: string
+    sql: ${TABLE}.playTime ;;
+  }
+
+  dimension: user_ip {
+    type: string
+    sql: ${TABLE}.srcIp ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
@@ -68,6 +88,13 @@ view: video_qoe_events {
   measure: session_count {
     type: count_distinct
     sql:  ${session_id} ;;
+    drill_fields: []
+  }
+
+  measure: total_watch_time {
+    type: sum
+    sql:  ${ playTime } ;;
+    value_format: "0.##\s"
     drill_fields: []
   }
 }
