@@ -89,7 +89,8 @@
     explore: video_qoe_events
     type: looker_grid
     fields: [video_qoe_events.session_id, video_qoe_events.time_stamp_time, video_qoe_events.content_name, video_qoe_events.video_src,
-      video_qoe_events.start_up_time, video_qoe_events.total_buffer_time, video_qoe_events.total_buffer_count]
+      video_qoe_events.start_up_time, video_qoe_events.total_buffer_time, video_qoe_events.total_buffer_count, video_qoe_events.user_ip, video_qoe_events.watch_time,
+      video_qoe_events.session_status]
     sorts: [video_qoe_events.time_stamp_time desc]
     limit: 500
     query_timezone: UTC
