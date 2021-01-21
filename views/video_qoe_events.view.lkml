@@ -7,6 +7,11 @@ view: video_qoe_events {
     sql: ${TABLE}.sessionId ;;
   }
 
+  dimension: content_name {
+    type: string
+    sql: ${TABLE}.contentName ;;
+  }
+
   dimension: start_up_time {
     type: number
     sql: ${TABLE}.startUpTime ;;
