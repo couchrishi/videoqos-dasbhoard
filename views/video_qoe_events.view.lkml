@@ -71,6 +71,12 @@ view: video_qoe_events {
     drill_fields: []
   }
 
+  measure: last_time_stamp {
+    type: date_time
+    sql:  MAX($(${time_stamp_raw} ;;
+    convert_tz:  no
+  }
+
   measure: avg_buffer_time {
     type: average
     sql:  ${total_buffer_time} ;;
