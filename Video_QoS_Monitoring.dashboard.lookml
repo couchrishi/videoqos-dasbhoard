@@ -86,13 +86,15 @@
   - title: Session Details
     name: Session Details
     model: saib-video-qos
-    explore: video_qoe_events
+    explore: session_details_last_timestamp
     type: looker_grid
-    fields: [video_qoe_events.session_id, video_qoe_events.time_stamp_time, video_qoe_events.content_name,
-      video_qoe_events.video_src, video_qoe_events.start_up_time, video_qoe_events.total_buffer_time,
-      video_qoe_events.total_buffer_count, video_qoe_events.user_ip, video_qoe_events.watch_time,
-      video_qoe_events.session_status]
-    sorts: [video_qoe_events.time_stamp_time desc]
+    fields: [session_details_last_timestamp.video_qoe_events_session_id,session_details_last_timestamp.video_qoe_events_time_stamp_time,
+    session_details_last_timestamp.video_qoe_events_content_name,session_details_last_timestamp.video_qoe_events_video_src,
+    session_details_last_timestamp.video_qoe_events_start_up_time,session_details_last_timestamp.video_qoe_events_total_buffer_time,
+    session_details_last_timestamp.video_qoe_events_total_buffer_count,session_details_last_timestamp.video_qoe_events_user_ip,
+    session_details_last_timestamp.video_qoe_events_watch_time,session_details_last_timestamp.video_qoe_events_session_status
+    ]
+    sorts: [session_details_last_timestamp.video_qoe_events_time_stamp_time desc]
     limit: 500
     show_view_names: false
     show_row_numbers: true

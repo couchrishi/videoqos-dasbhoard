@@ -26,3 +26,4 @@ include: "/**/*.dashboard"
 # }
 
 explore: video_qoe_events {}
+explore: session_details_last_timestamp {}
