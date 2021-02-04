@@ -41,6 +41,6 @@ explore: session_details_last_timestamp {
   join: cloud_cdn_metrics {
     type: left_outer
     relationship:  many_to_one
-    sql_on:  ${ video_qoe_events_session_id } = ${cloud_cdn_metrics.session_id} ;;
+    sql_on: ${session_details_last_timestamp.video_qoe_events_session_id} = ${cloud_cdn_metrics.session_id} ;;
   }
 }
