@@ -21,7 +21,7 @@ view: cloud_cdn_metrics {
   dimension: is_cache_hit {
     type: yesno
     #sql: ${TABLE}.isCacheHit ;;
-    sql:  CASE WHEN ${TABLE}.isCacheHit = True THEN 1 ELSE 0 END ;;
+    sql:  case when ${TABLE}.isCacheHit = True then 1 else 0 END ;;
   }
 
   # dimension: cache_hit {
