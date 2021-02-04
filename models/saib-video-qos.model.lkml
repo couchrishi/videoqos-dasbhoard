@@ -25,14 +25,14 @@ include: "/**/*.dashboard"
 #   description: "Triggered when new ID is added to ETL log"
 # }
 
-explore: video_qoe_events {}
+#explore: video_qoe_events {}
 explore: session_details_last_timestamp {}
 explore: cloud_cdn_metrics {}
 
-# explore: video_qoe_events {
-#   join: cloud_cdn_metrics {
-#     type: left_outer
-#     relationship:  many_to_one
-#     sql_on:  ${video_qoe_events.session_id} = ${cloud_cdn_metrics.session_id} ;;
-#   }
-# }
+explore: video_qoe_events {
+  join: cloud_cdn_metrics {
+    type: left_outer
+    relationship:  many_to_one
+    sql_on:  ${video_qoe_events.session_id} = ${cloud_cdn_metrics.session_id} ;;
+  }
+}
