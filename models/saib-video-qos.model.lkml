@@ -26,7 +26,7 @@ include: "/**/*.dashboard"
 # }
 
 explore: video_qoe_events {}
-explore: session_details_last_timestamp {}
+#explore: session_details_last_timestamp {}
 explore: cloud_cdn_metrics {}
 
 # explore: video_qoe_events {
@@ -37,10 +37,10 @@ explore: cloud_cdn_metrics {}
 #   }
 # }
 
-# explore: session_details_last_timestamp {
-#   join: cloud_cdn_metrics {
-#     type: left_outer
-#     relationship:  many_to_one
-#     sql_on: ${session_details_last_timestamp.video_qoe_events_session_id} = ${cloud_cdn_metrics.session_id} ;;
-#   }
-# }
+explore: session_details_last_timestamp {
+  join: cloud_cdn_metrics {
+    type: left_outer
+    relationship:  one_to_many
+    sql_on: ${session_details_last_timestamp.video_qoe_events_session_id} = ${cloud_cdn_metrics.session_id} ;;
+  }
+}
