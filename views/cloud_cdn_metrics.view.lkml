@@ -23,6 +23,11 @@ view: cloud_cdn_metrics {
     sql: ${TABLE}.isCacheHit ;;
   }
 
+  # dimension: cache_hit {
+  #   type: yesno
+  #   sql: ${TABLE}.isCacheHit.True ;;
+  # }
+
 
   dimension_group: time_stamp {
     type: time
@@ -37,6 +42,35 @@ view: cloud_cdn_metrics {
     ]
     sql: ${TABLE}.publishTime ;;
   }
+
+  measure: avg_client_latency {
+    type: average
+    sql: ${client_latency} ;;
+    value_format: "0.##\s"
+    drill_fields: []
+  }
+
+  measure: session_count {
+    type: count_distinct
+    sql:  ${session_id} ;;
+    drill_fields: []
+  }
+
+  measure: total_cdn_egress {
+    type: sum
+    sql:  ${egress_bytes}  ;;
+    value_format: "0.##\s"
+    drill_fields: []
+  }
+
+  # measure: cache_hit_ratio {
+  #   type: percent_of_total
+  #   sql:  ${cache_hit.count}/${is_cache_hit.count}  ;;
+  #   value_format: "0.##\s"
+  #   drill_fields: []
+  # }
+
+
   #
   # # Define your dimensions and measures here, like this:
   # dimension: user_id {
