@@ -50,7 +50,7 @@ view: cloud_cdn_metrics {
   measure: cache_hit_ratio {
     label: "Cache Hit Ratio"
     type: number
-    sql: ${cache_hit_count}::numeric / ${session_count} ;;
+    sql: ${cache_hit_count} / ${session_count} ;;
     value_format_name: percent_1
   }
 
