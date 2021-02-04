@@ -58,7 +58,7 @@ view: cloud_cdn_metrics {
 
   measure: total_cdn_egress_MB {
     type: sum
-    sql:  ${egress_bytes}  ;;
+    sql:  ${egress_bytes}/(1024*1024)  ;;
     #value_format: "0.##\s"
     value_format: "0.##"
     drill_fields: []
