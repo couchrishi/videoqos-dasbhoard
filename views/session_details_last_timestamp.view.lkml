@@ -1,4 +1,5 @@
 view: session_details_last_timestamp {
+  view_label: ""
   derived_table: {
     sql: SELECT
         video_qoe_events.sessionId  AS video_qoe_events_session_id,
