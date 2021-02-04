@@ -24,12 +24,6 @@ view: cloud_cdn_metrics {
     #sql:  case when ${TABLE}.isCacheHit = True then 1 else 0 END ;;
   }
 
-  # dimension: cache_hit {
-  #   type: yesno
-  #   sql: ${TABLE}.isCacheHit.True ;;
-  # }
-
-
   dimension_group: time_stamp {
     type: time
     timeframes: [
@@ -44,9 +38,19 @@ view: cloud_cdn_metrics {
     sql: ${TABLE}.publishTime ;;
   }
 
-  # measure: cache_hit_count {
-  #   type: count
-  #   sql:  CASE WHEN ${is_cache_hit} = True THEN 1 ELSE 0 END ;;
+  measure: cache_hit_count {
+    type: count
+    label: "Cache Hit Count"
+    filters: {
+      field: is_cache_hit
+      value: "yes"
+    }
+  }
+
+  # measure: cache_hit_ratio {
+  #   label: "Cache Hit Ratio"
+  #   type: number
+  #   sql:  $(${cache_hit_count}::numeric / $ ;;
   # }
 
   measure: avg_client_latency {
