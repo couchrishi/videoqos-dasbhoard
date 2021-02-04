@@ -20,7 +20,8 @@ view: cloud_cdn_metrics {
 
   dimension: is_cache_hit {
     type: yesno
-    sql: ${TABLE}.isCacheHit ;;
+    #sql: ${TABLE}.isCacheHit ;;
+    sql:  CASE WHEN ${TABLE}.isCacheHit = True THEN 1 ELSE 0 END ;;
   }
 
   # dimension: cache_hit {
@@ -42,6 +43,11 @@ view: cloud_cdn_metrics {
     ]
     sql: ${TABLE}.publishTime ;;
   }
+
+  # measure: cache_hit_count {
+  #   type: count
+  #   sql:  CASE WHEN ${is_cache_hit} = True THEN 1 ELSE 0 END ;;
+  # }
 
   measure: avg_client_latency {
     type: average
