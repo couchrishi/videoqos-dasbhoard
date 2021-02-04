@@ -56,6 +56,7 @@ view: cloud_cdn_metrics {
 
   measure: avg_client_latency {
     type: average
+    label: "Client to CDN latency"
     sql: ${client_latency} ;;
     value_format: "0.##\s"
     drill_fields: []
@@ -63,12 +64,14 @@ view: cloud_cdn_metrics {
 
   measure: session_count {
     type: count_distinct
+    label: "Total Sessions"
     sql:  ${session_id} ;;
     drill_fields: []
   }
 
   measure: request_count {
     type: count
+    label: "Total Requests"
     #sql:  ${session_id} ;;
     drill_fields: []
   }

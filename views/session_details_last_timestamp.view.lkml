@@ -27,51 +27,61 @@ view: session_details_last_timestamp {
 
   dimension: video_qoe_events_session_id {
     type: string
+    label: "Session ID"
     sql: ${TABLE}.video_qoe_events_session_id ;;
   }
 
   dimension: video_qoe_events_time_stamp_time {
     type: string
+    label: "Timestamp"
     sql: ${TABLE}.video_qoe_events_time_stamp_time ;;
   }
 
   dimension: video_qoe_events_content_name {
     type: string
+    label: "Content"
     sql: ${TABLE}.video_qoe_events_content_name ;;
   }
 
   dimension: video_qoe_events_video_src {
     type: string
+    label: "Source"
     sql: ${TABLE}.video_qoe_events_video_src ;;
   }
 
   dimension: video_qoe_events_start_up_time {
     type: number
+    label: "Start Up Time"
     sql: ${TABLE}.video_qoe_events_start_up_time ;;
   }
 
   dimension: video_qoe_events_total_buffer_time {
     type: number
+    label: "Buffer Duration"
     sql: ${TABLE}.video_qoe_events_total_buffer_time ;;
   }
 
   dimension: video_qoe_events_total_buffer_count {
     type: number
+    label: "Buffer Count"
     sql: ${TABLE}.video_qoe_events_total_buffer_count ;;
   }
 
   dimension: video_qoe_events_user_ip {
     type: string
+    label: "IP"
     sql: ${TABLE}.video_qoe_events_user_ip ;;
   }
 
   dimension: video_qoe_events_watch_time {
     type: number
+    label:  "Play Time"
     sql: ${TABLE}.video_qoe_events_watch_time ;;
   }
 
   dimension: video_qoe_events_session_status {
     type: string
+    label:  "Status"
     sql: ${TABLE}.video_qoe_events_session_status ;;
   }
 
