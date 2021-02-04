@@ -47,11 +47,12 @@ view: cloud_cdn_metrics {
     }
   }
 
-  # measure: cache_hit_ratio {
-  #   label: "Cache Hit Ratio"
-  #   type: number
-  #   sql:  $(${cache_hit_count}::numeric / $ ;;
-  # }
+  measure: cache_hit_ratio {
+    label: "Cache Hit Ratio"
+    type: number
+    sql: ${cache_hit_count}::numeric / ${session_count} ;;
+    value_format_name: percent_1
+  }
 
   measure: avg_client_latency {
     type: average
