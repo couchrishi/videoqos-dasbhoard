@@ -85,6 +85,7 @@ view: cloud_cdn_metrics {
     drill_fields: []
   }
 
+
   # measure: cache_hit_ratio {
   #   type: percent_of_total
   #   sql:  ${cache_hit.count}/${is_cache_hit.count}  ;;

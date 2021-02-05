@@ -26,7 +26,7 @@
     defaults_version: 1
     listen: {}
     row: 0
-    col: 9
+    col: 5
     width: 3
     height: 3
   - title: ''
@@ -52,7 +52,7 @@
     defaults_version: 1
     listen: {}
     row: 0
-    col: 5
+    col: 1
     width: 3
     height: 3
   - title: ''
@@ -80,7 +80,7 @@
     defaults_version: 1
     listen: {}
     row: 0
-    col: 13
+    col: 9
     width: 3
     height: 3
 
@@ -106,7 +106,7 @@
     defaults_version: 1
     listen: {}
     row: 0
-    col: 17
+    col: 13
     width: 3
     height: 3
 
@@ -131,7 +131,7 @@
     defaults_version: 1
     listen: {}
     row: 0
-    col: 21
+    col: 17
     width: 3
     height: 3
 
