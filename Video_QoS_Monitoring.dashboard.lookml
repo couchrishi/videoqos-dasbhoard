@@ -88,12 +88,11 @@
     model: saib-video-qos
     explore: session_details_last_timestamp
     type: looker_grid
-    fields: [session_details_last_timestamp.video_qoe_events_session_id,session_details_last_timestamp.video_qoe_events_time_stamp_time,
-    session_details_last_timestamp.video_qoe_events_content_name,session_details_last_timestamp.video_qoe_events_video_src,
-    session_details_last_timestamp.video_qoe_events_start_up_time,session_details_last_timestamp.video_qoe_events_total_buffer_time,
-    session_details_last_timestamp.video_qoe_events_total_buffer_count,session_details_last_timestamp.video_qoe_events_user_ip,
-    session_details_last_timestamp.video_qoe_events_watch_time,session_details_last_timestamp.video_qoe_events_session_status
-    ]
+    fields: [session_details_last_timestamp.video_qoe_events_time_stamp_time, session_details_last_timestamp.video_qoe_events_content_name,
+    session_details_last_timestamp.video_qoe_events_session_id, session_details_last_timestamp.video_qoe_events_user_ip,
+    session_details_last_timestamp.video_qoe_events_session_status, session_details_last_timestamp.video_qoe_events_start_up_time,
+    session_details_last_timestamp.video_qoe_events_watch_time, session_details_last_timestamp.video_qoe_events_total_buffer_time,
+    cloud_cdn_metrics.cache_hit_ratio, cloud_cdn_metrics.avg_client_latency, cloud_cdn_metrics.total_cdn_egress_MB]
     sorts: [session_details_last_timestamp.video_qoe_events_time_stamp_time desc]
     limit: 500
     show_view_names: false
