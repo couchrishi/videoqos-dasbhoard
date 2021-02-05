@@ -83,6 +83,33 @@
     col: 13
     width: 3
     height: 3
+
+  - name: add_a_unique_name_1612531872
+    title: Untitled Visualization
+    model: saib-video-qos
+    explore: cloud_cdn_metrics
+    type: single_value
+    fields: [cloud_cdn_metrics.total_cdn_egress_MB]
+    limit: 500
+    custom_color_enabled: true
+    show_single_value_title: true
+    show_comparison: false
+    comparison_type: value
+    comparison_reverse_colors: false
+    show_comparison_label: true
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    custom_color: "#5F6368"
+    single_value_title: Total CDN Egress
+    value_format: 0.## \M\B
+    defaults_version: 1
+    listen: {}
+    row: 0
+    col: 9
+    width: 17
+    height: 3
+
   - title: Session Details
     name: Session Details
     model: saib-video-qos
