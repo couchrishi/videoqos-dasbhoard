@@ -136,6 +136,32 @@
     height: 3
 
 
+  - name: add_a_unique_name_1612533110
+    title: Untitled Visualization
+    model: saib-video-qos
+    explore: cloud_cdn_metrics
+    type: single_value
+    fields: [cloud_cdn_metrics.cache_hit_ratio]
+    limit: 500
+    custom_color_enabled: true
+    show_single_value_title: true
+    show_comparison: false
+    comparison_type: value
+    comparison_reverse_colors: false
+    show_comparison_label: true
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    custom_color: "#EA8600"
+    single_value_title: Cache Hit Ratio
+    value_format: ''
+    defaults_version: 1
+    listen: {}
+    row: 0
+    col: 19
+    width: 3
+    height: 3
+
   - title: Session Details
     name: Session Details
     model: saib-video-qos
