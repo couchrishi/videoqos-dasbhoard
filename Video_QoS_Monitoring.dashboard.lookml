@@ -106,8 +106,8 @@
     defaults_version: 1
     listen: {}
     row: 0
-    col: 9
-    width: 17
+    col: 17
+    width: 3
     height: 3
 
   - title: Session Details
