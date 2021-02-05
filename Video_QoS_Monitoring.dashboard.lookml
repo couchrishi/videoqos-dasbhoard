@@ -158,7 +158,7 @@
     defaults_version: 1
     listen: {}
     row: 0
-    col: 19
+    col: 21
     width: 3
     height: 3
 
