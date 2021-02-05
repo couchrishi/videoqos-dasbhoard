@@ -56,12 +56,14 @@ view: session_details_last_timestamp {
     type: number
     label: "Start Up Time"
     sql: ${TABLE}.video_qoe_events_start_up_time ;;
+    value_format: "0.##\s"
   }
 
   dimension: video_qoe_events_total_buffer_time {
     type: number
     label: "Buffer Duration"
     sql: ${TABLE}.video_qoe_events_total_buffer_time ;;
+    value_format: "0.##\s"
   }
 
   dimension: video_qoe_events_total_buffer_count {
@@ -80,6 +82,7 @@ view: session_details_last_timestamp {
     type: number
     label:  "Play Time"
     sql: ${TABLE}.video_qoe_events_watch_time ;;
+    value_format: "0 \" s\""
   }
 
   dimension: video_qoe_events_session_status {
